@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Label tabindex="-1" text="Create a New Mod" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-bottom: 0; margin-left: 2%; margin-top: 2%; margin-right: 2%; font-size: 32px; -unity-font-style: bold;" />
+    <ui:ScrollView name="ScrollVIew">
+        <ui:GroupBox name="PrimaryAttributes" style="background-color: rgba(255, 255, 255, 0.13); margin-top: 2%; margin-right: 0; margin-bottom: 2%; margin-left: 0; padding-top: 0; padding-bottom: 0; padding-left: 0; width: auto; height: auto; justify-content: center; flex-direction: row; flex-basis: auto; position: relative; left: 0; top: 0; flex-wrap: wrap;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Icon" style="align-items: flex-start; align-self: flex-start; margin-top: 2%; margin-right: 2%; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 80px; height: 80px; background-image: url(&quot;project://database/Assets/UKButtercup/Template/icon.png?fileID=2800000&amp;guid=50471cfb3ef59c7598f0b194f47cf8d0&amp;type=3#icon&quot;); color: rgb(0, 0, 0);">
+                <ui:Label tabindex="-1" text="Icon" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgba(255, 255, 255, 0.54); margin-bottom: 4px; margin-left: 4px; padding-right: 4px; padding-left: 4px; align-items: flex-start; align-self: flex-start; justify-content: center; top: 60px; left: 0;" />
+            </ui:Button>
+            <ui:GroupBox name="Fields" style="background-color: rgba(255, 255, 255, 0.13); margin-top: 2%; margin-right: 8px; margin-bottom: 2%; margin-left: 0; padding-top: 0; padding-bottom: 0; padding-left: 0; width: 67%; height: auto; justify-content: center; flex-direction: column; flex-shrink: 100;">
+                <ui:GroupBox name="Names" style="background-color: rgba(255, 255, 255, 0.13); margin-top: 2%; margin-right: 2%; margin-bottom: 2%; margin-left: 2%; padding-top: 0; padding-bottom: 0; padding-left: 0; width: auto; height: auto; justify-content: center; flex-direction: column; flex-shrink: 100;">
+                    <ui:TextField picking-mode="Ignore" label="Name" value="Mod Name" tooltip="The name that will be presented to the user ." name="Name" style="font-size: 14px;" />
+                    <ui:TextField picking-mode="Ignore" label="Technical Name" value="ModTechnicalName" name="TechnicalName" keyboard-type="Default" tooltip="The name that will be used behind the scenes ." />
+                </ui:GroupBox>
+                <ui:GroupBox name="Version" style="background-color: rgba(255, 255, 255, 0.13); margin-top: 2%; margin-right: 2%; margin-bottom: 2%; margin-left: 2%; padding-top: 0; padding-bottom: 0; padding-left: 2%; width: auto; height: auto; justify-content: flex-start; flex-direction: row; flex-shrink: 100; align-items: stretch;">
+                    <ui:Label tabindex="-1" text="Version" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: middle-center; margin-top: 0; margin-right: 5%; margin-left: 0; margin-bottom: 0; padding-right: 0; padding-left: 0; padding-bottom: 0; padding-top: 0; align-items: flex-start; align-self: center;" />
+                    <ui:UnsignedIntegerField value="1" is-delayed="true" name="Major" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-self: auto; align-items: stretch; justify-content: flex-start;" />
+                    <ui:Label tabindex="-1" text="." parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-text-align: lower-center; margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left: 0.5%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; align-self: center; align-items: flex-start;" />
+                    <ui:UnsignedIntegerField value="0" is-delayed="true" name="Minor" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: stretch; align-self: auto;" />
+                    <ui:Label tabindex="-1" text="." parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-text-align: lower-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0.5%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; align-items: flex-start; align-self: center;" />
+                    <ui:UnsignedIntegerField value="0" is-delayed="true" name="Patch" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-items: stretch; align-self: auto;" />
+                </ui:GroupBox>
+            </ui:GroupBox>
+        </ui:GroupBox>
+        <ui:GroupBox name="Description" style="background-color: rgba(255, 255, 255, 0.13); margin-top: 2%; margin-right: 0; margin-bottom: 2%; margin-left: 0; padding-top: 0; padding-bottom: 0; padding-left: 0; width: auto; height: auto; justify-content: center; flex-direction: row; flex-basis: auto; position: relative; left: 0; top: 0; flex-wrap: wrap;">
+            <ui:TextField picking-mode="Ignore" label="Short Description" value="Write a short description !!" name="ShortDescription" style="font-size: 14px; -unity-text-align: middle-left; width: 90%;" />
+        </ui:GroupBox>
+        <ui:Foldout text="Features (Can be added or removed later)">
+            <ui:Toggle label="Enemies" value="true" name="Enemies" />
+            <ui:Toggle label="Weapons" value="true" name="Weapons" />
+            <ui:Toggle label="Levels" value="true" name="Levels" />
+            <ui:Toggle label="Scene Changers" value="true" name="SceneChangers" />
+            <ui:Toggle label="Plugin Config" value="true" name="PluginConfig" />
+            <ui:Toggle label="Settings and Keybinds" value="true" name="SettingsAndKeybinds" />
+        </ui:Foldout>
+        <ui:Button text="Create !!!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CreateButton" style="margin-top: 4px; margin-bottom: 4px; padding-top: 12px; padding-bottom: 12px; font-size: 20px; -unity-font-style: bold;" />
+    </ui:ScrollView>
+    <ui:GroupBox />
+</ui:UXML>
