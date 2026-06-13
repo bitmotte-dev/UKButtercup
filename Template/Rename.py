@@ -7,5 +7,9 @@ for root, dirs, files in os.walk(p):
         if(n.endswith(".cs") or n.endswith(".sh") or n.endswith(".gitignore") or n.endswith(".sln") or n.endswith(".csproj") or n.endswith(".json")):
             fp = os.path.join(root, n)
             with open(fp, "r", errors="ignore") as f:
-                print(n)
-                print(f.read())
+                textToReplace = f.read()
+            
+            textToReplace = textToReplace.replace("ModTechnicalName","AwesomePlugin")
+
+            with open(fp, "w", errors="ignore") as f:
+                f.write(textToReplace)
