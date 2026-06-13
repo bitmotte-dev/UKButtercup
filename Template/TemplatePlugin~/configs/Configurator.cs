@@ -4,7 +4,7 @@ using PluginConfig.API.Fields;
 using PluginConfig.API.Functionals;
 using UnityEngine;
 
-namespace ModTechnicalName;
+namespace Template;
 
 public static class Configurator
 {
@@ -13,7 +13,7 @@ public static class Configurator
 
     public static PluginConfigurator CreateConfigurator()
     {
-        PluginConfigurator config = PluginConfigurator.Create("ModName", MyPluginInfo.PLUGIN_GUID);
+        PluginConfigurator config = PluginConfigurator.Create("TemplateFullName", MyPluginInfo.PLUGIN_GUID);
 
         //ConfigSpace discordGap = new(config.rootPanel,15f);
         //ConfigHeader discordInfo = new(config.rootPanel,"Join my discord for sneak peeks,devlogs,and the possibility to test my mods early ! !",20,TMPro.TextAlignmentOptions.Left);

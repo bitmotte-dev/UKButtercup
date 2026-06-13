@@ -4,7 +4,7 @@ using HarmonyLib;
 using PluginConfig.API;
 using UnityEngine.SceneManagement;
 
-namespace ModTechnicalName;
+namespace Template;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency("com.eternalUnion.pluginConfigurator",BepInDependency.DependencyFlags.HardDependency)]

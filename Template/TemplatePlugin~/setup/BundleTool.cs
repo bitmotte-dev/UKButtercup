@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ModTechnicalName;
+namespace Template;
 static class BundleTool
 {
     public static AssetBundle Load(string fileName) {

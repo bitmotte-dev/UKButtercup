@@ -38,15 +38,15 @@ echo "building. . ."
 ./copybundle.sh
 echo ""
 
-dotnet build "ModTechnicalName.sln"
+dotnet build "Template.sln"
 
 userpath=$(< "./resources/buildsettings" )
-if [ -d "${userpath}plugins/ModTechnicalName/" ]; then
+if [ -d "${userpath}plugins/Template/" ]; then
     echo "destroying existing files"
-    rm -r -f "${userpath}plugins/ModTechnicalName/"
+    rm -r -f "${userpath}plugins/Template/"
 fi
 
 echo "copying build to ultrakill folders"
-mkdir "${userpath}plugins/ModTechnicalName/"
-cp "./bin/Debug/netstandard2.1/AuthorTechnicalName.ModTechnicalName.dll" "${userpath}plugins/ModTechnicalName/"
+mkdir "${userpath}plugins/Template/"
+cp "./bin/Debug/netstandard2.1/Author.Template.dll" "${userpath}plugins/Template/"
 echo "done! ! !"

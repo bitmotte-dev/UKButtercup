@@ -1,14 +1,14 @@
 using System.IO;
 using System.Reflection;
 
-namespace ModTechnicalName;
+namespace Template;
 static class EmbeddedAccess
 {
     public static byte[] AccessFile(string fileName)
     {
         Assembly assembly = Assembly.GetExecutingAssembly();
         byte[] bytes;
-        using (Stream resFilestream = assembly.GetManifestResourceStream($"ModTechnicalName.resources.{fileName}"))
+        using (Stream resFilestream = assembly.GetManifestResourceStream($"Template.resources.{fileName}"))
         {
             if (resFilestream == null)
             {
@@ -24,7 +24,7 @@ static class EmbeddedAccess
     public static Stream AccessFileStream(string fileName)
     {
         Assembly assembly = Assembly.GetExecutingAssembly();
-        Stream resFilestream = assembly.GetManifestResourceStream($"ModTechnicalName.resources.{fileName}");
+        Stream resFilestream = assembly.GetManifestResourceStream($"Template.resources.{fileName}");
         if (resFilestream == null)
         {
             return null;

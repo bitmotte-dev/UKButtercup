@@ -1,0 +1,4 @@
+NewTemplateName
+NewTemplateFullName
+NewAuthorFullName
+NewAuthorName

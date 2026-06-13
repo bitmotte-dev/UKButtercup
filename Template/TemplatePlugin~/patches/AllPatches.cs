@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UI.Extensions;
 
-namespace ModTechnicalName;
+namespace Template;
 
 //[HarmonyPatch(typeof(???), "FunctionName")]
 public class SimpleExample : MonoBehaviour
