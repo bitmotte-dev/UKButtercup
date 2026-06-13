@@ -1,10 +1,11 @@
-with open("sample.txt", "r") as file:
-    text = file.read()
+import os
 
-newText = text
-newText = newText.replace("file","bees")
+p = os.getcwd()
 
-with open("sample.txt", "w") as file:
-    file.write(newText)
-
-print("done ! ! !")
+for root, dirs, files in os.walk(p):
+    for n in files:
+        if(n.endswith(".cs") or n.endswith(".sh") or n.endswith(".gitignore") or n.endswith(".sln") or n.endswith(".csproj") or n.endswith(".json")):
+            fp = os.path.join(root, n)
+            with open(fp, "r", errors="ignore") as f:
+                print(n)
+                print(f.read())
