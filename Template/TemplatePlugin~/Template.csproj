@@ -31,11 +31,6 @@
     <Reference Include="lib/Unity.Addressables.dll" />
     <Reference Include="lib/UnityEngine.AssetBundleModule.dll" />
     <Reference Include="lib/Unity.ResourceManager.dll" />
-
-    <Reference Include="lib/UnityEngine.UI.dll" />
-    <Reference Include="lib/UnityEngine.UIElementsModule.dll" />
-    <Reference Include="lib/UnityEngine.UIModule.dll" />
-    <Reference Include="lib/UnityUIExtensions.dll" />
     <Reference Include="lib/Unity.InputSystem.dll" />
   </ItemGroup>
   
